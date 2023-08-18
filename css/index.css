@@ -1,0 +1,254 @@
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lato:wght@400;700;900&family=Raleway:wght@300;400;500;600;700&display=swap');
+
+  /* NORMALIZE */
+
+  *,
+  *::before,
+  *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+  :root {
+      --html: #111111;
+      --footer: #fff;
+      --headerFooterBg: #30343F;
+      --buttonBg: #30343F;
+      --buttonText: #fff;
+      --hrArticle: #FF3333;
+      --navBar: #fff;
+      --hero: #fff;
+      --buttonHeroText: #111111;
+      --buttonHeroBg: #fff;
+      --nuevoBg: #FF3333;
+      --nuevoText: #fff;
+      --cuotaSinInteres: #1D84B5;
+  }
+
+  html {
+      font-family: 'Inter', sans-serif;
+      font-size: 62.5%;
+      color: var(--html);
+  }
+
+  a {
+      text-decoration: none;
+      font-size: 2em;
+      font-family: inherit;
+      color: inherit;
+  }
+
+  ul,
+  ol {
+      list-style-type: none;
+  }
+
+  p {
+      font-size: 1.8em;
+  }
+
+  main.container {
+      max-width: 1200px;
+      margin: 0 auto;
+      margin-bottom: 100px;
+  }
+
+  /* HEADER - FOOTER */
+
+  header,
+  footer {
+      font-family: 'Raleway', sans-serif;
+      color: var(--footer);
+      background-color: var(--headerFooterBg);
+      font-weight: normal;
+      width: 100%;
+  }
+
+  nav.nav_header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 4rem 10rem;
+      color: var(--navBar)
+  }
+
+  ul.ul_nav_header {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+  }
+
+  footer {
+      padding-top: 100px;
+  }
+
+  section.section_footer>nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 4rem 10rem;
+      text-transform: uppercase;
+  }
+
+  ul.ul_nav_section_footer {
+      display: grid;
+      gap: 2em
+  }
+
+  p.p_footer {
+      text-align: center;
+      padding-bottom: 20px;
+  }
+
+  /* HERO */
+
+  section.hero_section_funkos_header {
+      background-image: url(../images/funkos-banner.webp);
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 388px;
+      color: var(--hero);
+      padding: 100px;
+      
+  }
+
+  section.hero_section_funkos_header article { 
+        max-width: 1200px;
+      margin: 0 auto;
+      margin-bottom: 100px;
+      }
+
+  section.hero_section_funkos_header h3 {
+      font-size: 40px;
+      margin-bottom: 10px;
+      
+  }
+
+  section.hero_section_funkos_header button {
+    font-family: 'Inter', sans-serif;
+      display: flex;
+      align-items: center;
+      background-color: var(--buttonHeroBg);
+      color: var(--buttonHeroText);
+      border-radius: 50px;
+      padding: 30px 90px;
+      height: 50px;
+      font-weight: 500;
+      margin-top: 50px;
+      border: none;
+      text-transform: uppercase;
+  }
+
+
+
+  /* MAIN */
+
+  /* FUNKOS */
+
+  section.funkos section {
+      display: flex;
+      align-items: center;
+  }
+
+  section.funkos section:nth-of-type(even) {
+      flex-direction: row-reverse;
+  }
+
+  section.funkos section:nth-of-type(odd) {
+      flex-direction: row;
+  }
+
+  section.funkos section {
+      font-family: 'Raleway', sans-serif;
+  }
+
+  section.funkos section h3 {
+      font-size: 46px;
+      font-weight: 500;
+      max-width: 80%;
+  }
+
+  section.funkos section p {
+      max-width: 80%;
+  }
+
+  hr.article_hr_red {
+      background-color: var(--hrArticle);
+      height: 3px;
+      border-style: none;
+      margin: 20px 0 40px 0;
+  }
+
+
+  /* BOTONES VER COLECCIÓN */
+
+  button.button_ver_coleccion {
+      display: flex;
+      align-items: center;
+      background-color: var(--buttonBg);
+      color: var(--buttonText);
+      border-radius: 50px;
+      padding: 30px 60px;
+      height: 50px;
+      font-weight: 500;
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      border: none;
+  }
+
+/* ÚLTIMOS LANZAMIENTO */
+
+.ultimos_lanzamientos h2 {
+    font-size: 40px;
+}
+
+.ultimos_lanzamientos article {
+    position: relative;
+    margin-top: 50px;
+}
+
+.ultimos_lanzamientos picture .span_nuevo {
+    position: absolute;
+    right: 0px;
+    background-color: var(--nuevoBg);
+    color: var(--nuevoText);
+    padding: 6px 24px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.ultimos_lanzamientos ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px; 
+}
+
+
+
+.ultimos_lanzamientos picture img {
+  max-width: 100%; 
+}
+
+
+
+div.ultimos_lanzamientos_text {
+    display: grid;
+    gap: 20px;
+}
+
+div.ultimos_lanzamientos_text p {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+div.ultimos_lanzamientos_text p.cuotas_sin_interes {
+    font-weight: 700;
+    color:var(--cuotaSinInteres)
+}
+
+div.ultimos_lanzamientos_text h4 {
+    font-weight: 700;
+    font-size: 22px;
+}
+
