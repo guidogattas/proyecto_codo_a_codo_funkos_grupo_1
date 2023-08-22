@@ -71,7 +71,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 4rem 10rem;
+      padding: 40px 100px;
       color: var(--navBar)
   }
 
@@ -89,13 +89,13 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 4rem 10rem;
+      padding: 40px 100px;
       text-transform: uppercase;
   }
 
   ul.ul_nav_section_footer {
       display: grid;
-      gap: 2em
+      gap: 20px
   }
 
   p.p_footer {
@@ -218,11 +218,14 @@
   }
 
   .ultimos_lanzamientos article {
-      position: relative;
       margin-top: 50px;
   }
 
-  .ultimos_lanzamientos picture .span_nuevo {
+.ultimos_lanzamientos picture  {
+    position: relative;
+}
+
+  .ultimos_lanzamientos picture span.span_nuevo {
       position: absolute;
       right: 0px;
       background-color: var(--nuevoBg);
@@ -231,6 +234,32 @@
       font-size: 14px;
       text-transform: uppercase;
   }
+
+  .ultimos_lanzamientos {
+    position: relative;
+  }
+
+    .ultimos_lanzamientos img.flecha_izquierda {
+      position: absolute;
+      left: 0px;
+      top:50%;
+      color: var(--nuevoText);
+      font-size: 14px;
+      text-transform: uppercase;
+  }
+
+      .ultimos_lanzamientos img.flecha_derecha {
+      position: absolute;
+      right: 0px;
+      top:50%;
+      color: var(--nuevoText);
+      font-size: 14px;
+      text-transform: uppercase;
+  }
+
+
+
+  
 
   .ultimos_lanzamientos ul {
       display: flex;
