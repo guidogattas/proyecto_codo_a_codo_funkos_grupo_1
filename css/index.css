@@ -239,6 +239,10 @@
     position: relative;
   }
 
+  .flecha {
+    height: 20px;
+  }
+
     .ultimos_lanzamientos img.flecha_izquierda {
       position: absolute;
       left: 0px;
