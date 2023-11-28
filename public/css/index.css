@@ -73,7 +73,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 40px 100px;
-      color: var(--navBar)
+      color: var(--navBar);
   }
 
   ul.ul_nav_header {
@@ -145,9 +145,8 @@
   }
 
   section.hero_section_funkos_header button:hover {
-    background-color: var(--buttonHeroText);
-    color: var(--buttonHeroBg)
-
+      background-color: var(--buttonHeroText);
+      color: var(--buttonHeroBg)
   }
 
 
@@ -223,9 +222,9 @@
       margin-top: 50px;
   }
 
-.ultimos_lanzamientos picture  {
-    position: relative;
-}
+  .ultimos_lanzamientos picture {
+      position: relative;
+  }
 
   .ultimos_lanzamientos picture span.span_nuevo {
       position: absolute;
@@ -235,29 +234,30 @@
       padding: 6px 24px;
       font-size: 14px;
       text-transform: uppercase;
+
   }
 
   .ultimos_lanzamientos {
-    position: relative;
+      position: relative;
   }
 
   .flecha {
-    height: 20px;
+      height: 20px;
   }
 
-    .ultimos_lanzamientos img.flecha_izquierda {
+  .ultimos_lanzamientos img.flecha_izquierda {
       position: absolute;
       left: 0px;
-      top:50%;
+      top: 50%;
       color: var(--nuevoText);
       font-size: 14px;
       text-transform: uppercase;
   }
 
-      .ultimos_lanzamientos img.flecha_derecha {
+  .ultimos_lanzamientos img.flecha_derecha {
       position: absolute;
       right: 0px;
-      top:50%;
+      top: 50%;
       color: var(--nuevoText);
       font-size: 14px;
       text-transform: uppercase;
@@ -265,7 +265,7 @@
 
 
 
-  
+
 
   .ultimos_lanzamientos ul {
       display: flex;

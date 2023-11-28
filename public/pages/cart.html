@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Funkoshop</title>
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/cart.css">
+    <link rel="stylesheet" href="../css/item.css">
 </head>
 
 <body>
@@ -40,7 +42,51 @@
     <!-- MAIN -->
 
     <main class="container">
-        <h1>CART</h1>
+        <h1 class="carrito_de_compras">CARRITO DE COMPRAS
+        </h1>
+
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th>Detalle de Producto</th>
+                    <th>Cantidad</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody class="cart-tbody">
+                <tr>
+                    <td>
+                        <section class="item-section">
+                            <picture>
+                                <img src="../images/star-wars/baby-yoda-1.webp"
+                                    alt="Figura coleccionable de Funko de Grogu de la serie The Mandolorian">
+                            </picture>
+                            <article class="item-article">
+                                <h4>STAR WARS</h4>
+                                <h3>BABY YODA BLUEBALL</h3>
+                                <p>STAR WARS
+                                </p>
+                                <span class="item-precio">precio: $ 1799,99</span>
+
+                            </article>
+                        </section>
+                    </td>
+                    <td>
+                        <div class="item-agregar_al_carrito">
+                            <input type="number" value="0">
+                            <div>
+                                <button>+</button>
+                                <button>-</button>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="cart-td-precio-x">
+                        <p class="item-precio">$ 1799,99</p>
+                        <button>X</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </main>
 
     <!-- FOOTER -->

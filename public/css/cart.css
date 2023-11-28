@@ -1,0 +1,56 @@
+main.container {
+    margin-top: 128px;
+}
+
+h1.carrito_de_compras {
+    color: #111;
+    font-family: 'Raleway';
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    display: inline;
+    border-bottom: 5px solid #F33;
+    margin-bottom: 100;
+}
+
+table tr {
+    border-radius: 10px;
+box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+
+
+.cart-table {
+    margin-top: 60px;
+}
+
+.cart-tbody{
+/* display: flex; */
+justify-content: space-between;
+align-items: center;
+text-align: center;
+border-radius: 25px;
+background: #FAFAFF;
+
+margin: 0 auto;
+}
+
+th {
+    color: #000;
+    font-family: 'Inter';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    height: 51px;
+}
+
+.cart-td-precio-x{
+    /* display: flex; */
+    align-self: center;
+    align-content: center;
+    justify-content: center;
+}
