@@ -1,0 +1,142 @@
+<%- include("./partials/head.ejs") %>
+
+<body>
+    <!-- HEADER -->
+    <%- include('./partials/header.ejs') %><!-- HERO -->
+    <section class="hero_section_funkos_header">
+        <article>
+            <h3>Nuevos Ingresos</h3>
+            <p>Descubrí el próximo Funko Pop de tu colección</p>
+            <button>
+                <a href="./shop">Shop</a>
+            </button>
+        </article>
+    </section>
+    <!-- MAIN -->
+    <main class="container">
+        <section class="funkos">
+            <!-- FUNKOS -->
+
+            <section>
+                <article>
+                    <h3>STAR WARS & <br> THE MANDOLORIAN</h3>
+                    <p>Disfruta de una saga que sigue agregando personajes a
+                        su
+                        colección.</p>
+                    <hr class="article_hr_red">
+                    <button class="button_ver_coleccion">
+                        <a href="./shop">VER COLECCIÓN</a>
+                    </button>
+                </article>
+                <picture>
+                    <img src="./images/star-wars/baby-yoda-1.webp"
+                        alt="Figura coleccionable de Funko de Grogu de la serie The Mandolorian">
+                </picture>
+            </section>
+            <section>
+                <article>
+                    <h3>POKEMON INDIGO</h3>
+                    <p>Atrapa todos los que puedas y disfruta de una colección
+                        llena de amigos.</p>
+                    <hr class="article_hr_red">
+                    <button class="button_ver_coleccion">
+                        <a href="./shop">VER COLECCIÓN</a>
+
+                    </button>
+                </article>
+                <picture>
+                    <img src="./images/pokemon/vulpix-1.webp"
+                        alt="Figura coleccionable de Funko de Vulpix de la serie Pokemon">
+                </picture>
+            </section>
+            <section>
+                <article>
+                    <h3>HARRY POTTER</h3>
+                    <p>Revive los recuerdos de una saga llena de magia y
+                        encanto.</p>
+                    <hr class="article_hr_red">
+                    <button class="button_ver_coleccion">
+                        <a href="./shop">VER COLECCIÓN</a>
+
+                    </button>
+                </article>
+                <picture>
+                    <img src="./images/harry-potter/snape-patronus-1.webp"
+                        alt="Figura coleccionable de Funko del Patronus de Snape de la película Harry Potter">
+                </picture>
+            </section>
+        </section>
+        <!-- ULTIMOS LANZAMIENTOS -->
+        <section class="ultimos_lanzamientos">
+            <h2>ÚLTIMOS LANZAMIENTOS</h2>
+            <ul>
+                <li>
+                    <article>
+                        <a href="./item.html">
+                            <picture>
+                                <img src="./images/star-wars/trooper-1.webp"
+                                    alt="Figura coleccionable de Funko de Stormtrooper">
+                                <span class="span_nuevo">Nuevo</span>
+                            </picture>
+                            <div class="ultimos_lanzamientos_text">
+                                <p>STAR WARS</p>
+                                <h4>STORMTROOPER LIGHTSABER</h4>
+                                <p>$ 1799,99</p>
+                                <p class="cuotas_sin_interes">3 CUOTAS SIN
+                                    INTERÉS</p>
+                            </div>
+                        </a>
+                        <a href="javascript:void(0)">
+                            <img class="flecha flecha_izquierda"
+                                src="./images/icons/Left Vector 1 (Stroke).png">
+                        </a>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <a href="./item.html">
+                            <picture>
+                                <img src="./images/pokemon/pidgeotto-1.webp"
+                                    alt="Figura coleccionable de Funko de Pidgeotto">
+                                <span class="span_nuevo">Nuevo</span>
+                            </picture>
+                            <div class="ultimos_lanzamientos_text">
+                                <p>POKEMON</p>
+                                <h4>PIDGEOTTO</h4>
+                                <p>$ 1799,99</p>
+                                <p class="cuotas_sin_interes">3 CUOTAS SIN
+                                    INTERÉS</p>
+                            </div>
+                        </a>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <a href="./item.html">
+                            <picture>
+                                <img src="./images/harry-potter/luna-1.webp"
+                                    alt="Figura coleccionable de Funko de Luna Lovegood">
+                                <span class="span_nuevo">Nuevo</span>
+                            </picture>
+                            <div class="ultimos_lanzamientos_text">
+                                <p>HARRY POTTER</p>
+                                <h4>LUNA LOVEGOOD LION MASK</h4>
+                                <p>$ 1799,99</p>
+                                <p class="cuotas_sin_interes">3 CUOTAS SIN
+                                    INTERÉS</p>
+                            </div>
+                            </div>
+                        </a>
+                        <a href="javascript:void(0)">
+                            <img class="flecha flecha_derecha"
+                                src="./images/icons/Right Vector 1 (Stroke).png">
+                        </a>
+                    </article>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <%- include("./partials/footer.ejs") %>
+</body>
+
+</html>
