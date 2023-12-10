@@ -55,79 +55,102 @@
         </section>
         <section class="ultimos_lanzamientos">
             <h2>PRODUCTOS RELACIONADOS</h2>
-            <ul>
-                <li>
-                    <article>
-                        <a href="/shop/item/4">
-                            <picture>
-                                <img src="/images/star-wars/trooper-1.webp"
-                                    alt="Figura coleccionable de Funko de Stormtrooper">
-                                <span class="span_nuevo">Nuevo</span>
-                            </picture>
+            <div class="glide">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+                        <li class="glide__slides">
+                            <article>
+                                <a href="/shop/item/4">
+                                    <picture>
+                                        <img src="/images/star-wars/trooper-1.webp"
+                                            alt="Figura coleccionable de Funko de Stormtrooper">
+                                        <span class="span_nuevo">Nuevo</span>
+                                    </picture>
 
-                            <div class="ultimos_lanzamientos_text">
-                                <p>STAR WARS</p>
-                                <h4>STORMTROOPER LIGHTSABER</h4>
-                                <p>$ 1799,99</p>
-                                <p class="cuotas_sin_interes">3 CUOTAS SIN
-                                    INTERÉS</p>
-                            </div>
-                        </a>
-                        <!-- <a href="javascript:void(0)">
-                            <img class="flecha flecha_izquierda"
-                                src="/images/icons/Left Vector 1 (Stroke).png">
-                        </a> -->
-                    </article>
+                                    <div class="ultimos_lanzamientos_text">
+                                        <p>STAR WARS</p>
+                                        <h4>STORMTROOPER LIGHTSABER</h4>
+                                        <p>$ 1799,99</p>
+                                        <p class="cuotas_sin_interes">3 CUOTAS
+                                            SIN
+                                            INTERÉS</p>
+                                    </div>
+                                </a>
+                                <!-- <a href="javascript:void(0)">
+                                        <img class="flecha flecha_izquierda"
+                                            src="/images/icons/Left Vector 1 (Stroke).png">
+                                    </a> -->
+                            </article>
+                        </li>
+                        <li class="glide__slides">
+                            <article>
+                                <a href="/shop/item/7">
+                                    <picture>
+                                        <img src="/images/pokemon/pidgeotto-1.webp"
+                                            alt="Figura coleccionable de Funko de Pidgeotto">
+                                        <span class="span_nuevo">Nuevo</span>
+                                    </picture>
+                                    <div class="ultimos_lanzamientos_text">
+                                        <p>POKEMON</p>
+                                        <h4>PIDGEOTTO</h4>
+                                        <p>$ 1799,99</p>
+                                        <p class="cuotas_sin_interes">3 CUOTAS
+                                            SIN
+                                            INTERÉS</p>
+                                    </div>
+                                </a>
+                            </article>
+                        </li>
+                        <li class="glide__slides">
+                            <article>
+                                <a href="/shop/item/12">
+                                    <picture>
+                                        <img src="/images/harry-potter/luna-1.webp"
+                                            alt="Figura coleccionable de Funko de Luna Lovegood">
+                                        <span class="span_nuevo">Nuevo</span>
+                                    </picture>
+                                    <div class="ultimos_lanzamientos_text">
+                                        <p>HARRY POTTER</p>
+                                        <h4>LUNA LOVEGOOD LION MASK</h4>
+                                        <p>$ 1799,99</p>
+                                        <p class="cuotas_sin_interes">3 CUOTAS
+                                            SIN
+                                            INTERÉS</p>
+                                    </div>
+                </div>
+                </a>
+                <!-- <a href="javascript:void(0)">
+                                        <img class="flecha flecha_derecha"
+                                            src="/images/icons/Right Vector 1 (Stroke).png">
+                                    </a> -->
+                </article>
                 </li>
-                <li>
-                    <article>
-                        <a href="/shop/item/7">
-                            <picture>
-                                <img src="/images/pokemon/pidgeotto-1.webp"
-                                    alt="Figura coleccionable de Funko de Pidgeotto">
-                                <span class="span_nuevo">Nuevo</span>
-                            </picture>
-                            <div class="ultimos_lanzamientos_text">
-                                <p>POKEMON</p>
-                                <h4>PIDGEOTTO</h4>
-                                <p>$ 1799,99</p>
-                                <p class="cuotas_sin_interes">3 CUOTAS SIN
-                                    INTERÉS</p>
-                            </div>
-                        </a>
-                    </article>
-                </li>
-                <li>
-                    <article>
-                        <a href="/shop/item/12">
-                            <picture>
-                                <img src="/images/harry-potter/luna-1.webp"
-                                    alt="Figura coleccionable de Funko de Luna Lovegood">
-                                <span class="span_nuevo">Nuevo</span>
-                            </picture>
-                            <div class="ultimos_lanzamientos_text">
-                                <p>HARRY POTTER</p>
-                                <h4>LUNA LOVEGOOD LION MASK</h4>
-                                <p>$ 1799,99</p>
-                                <p class="cuotas_sin_interes">3 CUOTAS SIN
-                                    INTERÉS</p>
-                            </div>
-                            </div>
-                        </a>
-                        <!-- <a href="javascript:void(0)">
-                            <img class="flecha flecha_derecha"
-                                src="/images/icons/Right Vector 1 (Stroke).png">
-                        </a> -->
-                    </article>
-                </li>
-            </ul>
-
+                </ul>
+            </div>
+            </div>
         </section>
     </main>
 
     <!-- FOOTER -->
     <%- include("../partials/footer.ejs") %>
     <script src="/js/item.js"></script>
+    <script>
+        new Glide('.glide', {
+            type: 'carousel',
+            startAt: 0,
+            perView: 3,
+            gap: 30,
+            autoplay: 2000,
+            breakpoints: {
+                991: {
+                    perView: 2
+                },
+                768: {
+                    perView: 1
+                }
+            }
+        }).mount();
+    </script>
 </body>
 
 </html>
