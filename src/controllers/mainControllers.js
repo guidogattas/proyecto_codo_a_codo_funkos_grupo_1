@@ -1,22 +1,19 @@
-const ejs = require('ejs');
+const fs = require('fs');
 const { resolve } = require('path');
 
+const funkoData = JSON.parse(fs.readFileSync(resolve() + "/src/data/funko.json", 'utf-8'));
+
 const mainControllers = {
-    mainPage: async (req, res) => {
-        const index = await ejs.renderFile(resolve() + '/src/views/index.ejs');
-        res.send(index)
+    mainPage: (req, res) => {
+        res.render('index', { funkoData: funkoData });
     },
-    home: async (req, res) => {
-        const index = await ejs.renderFile(resolve() + '/src/views/index.ejs');
-        res.send(index)
+    home: (req, res) => {
+        res.render('index', { funkoData: funkoData });
     },
-    contact: async (req, res) => {
-        const index = await ejs.renderFile(resolve() + '/src/views/pages/contact.ejs');
-        res.send(index)
+    contact: (req, res) => {
+        res.render('pages/contact.ejs')
     },
-
     about: (req, res) => res.send('Route for About View'),
-
     faqs: (req, res) => res.send('Route for Faqs View'),
 }
 

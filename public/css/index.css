@@ -52,7 +52,7 @@
   }
 
   main.container {
-      max-width: 1200px;
+    max-width: 80%;
       margin: 0 auto;
       margin-bottom: 100px;
   }
@@ -83,7 +83,7 @@
   }
 
   footer {
-      padding-top: 100px;
+    margin-top: auto;
   }
 
   section.section_footer>nav {
@@ -102,6 +102,7 @@
   p.p_footer {
       text-align: center;
       padding-bottom: 20px;
+      color: var(--footer);
   }
 
 
@@ -126,8 +127,14 @@
   section.hero_section_funkos_header h3 {
       font-size: 40px;
       margin-bottom: 10px;
+      color: var(--hero);
 
   }
+
+  section.hero_section_funkos_header p {
+    color: var(--hero);
+
+}
 
   section.hero_section_funkos_header button {
       font-family: 'Inter', sans-serif;
@@ -214,7 +221,7 @@
 
   /* ÚLTIMOS LANZAMIENTO */
 
-  .ultimos_lanzamientos h2 {
+  .ultimos_lanzamientos_h2 {
       font-size: 40px;
   }
 
@@ -243,9 +250,10 @@
 
   .flecha {
       height: 20px;
+      z-index: 9;
   }
 
-  .ultimos_lanzamientos img.flecha_izquierda {
+  .ultimos_lanzamientos a.flecha_izquierda {
       position: absolute;
       left: 0px;
       top: 50%;
@@ -254,7 +262,7 @@
       text-transform: uppercase;
   }
 
-  .ultimos_lanzamientos img.flecha_derecha {
+  .ultimos_lanzamientos a.flecha_derecha {
       position: absolute;
       right: 0px;
       top: 50%;
@@ -300,3 +308,5 @@
       font-weight: 700;
       font-size: 22px;
   }
+
+

@@ -3,13 +3,11 @@ const { resolve } = require('path');
 
 
 const adminControllers = {
-    adminView: async (req, res) => {
-        const index = await ejs.renderFile(resolve() + '/src/views/pages/admin.ejs');
-        res.send(index)
+    adminView: (req, res) => {
+        res.render('pages/admin.ejs')
     },
-    adminCreateView: async (req, res) => {
-        const index = await ejs.renderFile(resolve() + '/src/views/pages/create.ejs');
-        res.send(index)
+    adminCreateView: (req, res) => {
+        res.render('pages/create.ejs')
     },
     adminCreatePost: (req, res) => { res.send('Route for Post Admin Create View') },
 

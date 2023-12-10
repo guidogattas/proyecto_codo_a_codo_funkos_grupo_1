@@ -1,8 +1,7 @@
 <%- include("./partials/head.ejs") %>
 
 <body>
-    <!-- HEADER -->
-    <%- include('./partials/header.ejs') %><!-- HERO -->
+    <%- include('./partials/header.ejs') %>
     <section class="hero_section_funkos_header">
         <article>
             <h3>Nuevos Ingresos</h3>
@@ -12,11 +11,9 @@
             </button>
         </article>
     </section>
-    <!-- MAIN -->
+
     <main class="container">
         <section class="funkos">
-            <!-- FUNKOS -->
-
             <section>
                 <article>
                     <h3>STAR WARS & <br> THE MANDOLORIAN</h3>
@@ -25,7 +22,7 @@
                         colección.</p>
                     <hr class="article_hr_red">
                     <button class="button_ver_coleccion">
-                        <a href="./shop">VER COLECCIÓN</a>
+                        <a href="./shop/collection/star-wars">VER COLECCIÓN</a>
                     </button>
                 </article>
                 <picture>
@@ -40,7 +37,7 @@
                         llena de amigos.</p>
                     <hr class="article_hr_red">
                     <button class="button_ver_coleccion">
-                        <a href="./shop">VER COLECCIÓN</a>
+                        <a href="./shop/collection/pokemon">VER COLECCIÓN</a>
 
                     </button>
                 </article>
@@ -56,7 +53,8 @@
                         encanto.</p>
                     <hr class="article_hr_red">
                     <button class="button_ver_coleccion">
-                        <a href="./shop">VER COLECCIÓN</a>
+                        <a href="./shop/collection/harry-potter">VER
+                            COLECCIÓN</a>
 
                     </button>
                 </article>
@@ -66,77 +64,110 @@
                 </picture>
             </section>
         </section>
-        <!-- ULTIMOS LANZAMIENTOS -->
+        <h2 class="ultimos_lanzamientos_h2">ÚLTIMOS LANZAMIENTOS</h2>
+
         <section class="ultimos_lanzamientos">
-            <h2>ÚLTIMOS LANZAMIENTOS</h2>
-            <ul>
-                <li>
-                    <article>
-                        <a href="./item.html">
-                            <picture>
-                                <img src="./images/star-wars/trooper-1.webp"
-                                    alt="Figura coleccionable de Funko de Stormtrooper">
-                                <span class="span_nuevo">Nuevo</span>
-                            </picture>
-                            <div class="ultimos_lanzamientos_text">
-                                <p>STAR WARS</p>
-                                <h4>STORMTROOPER LIGHTSABER</h4>
-                                <p>$ 1799,99</p>
-                                <p class="cuotas_sin_interes">3 CUOTAS SIN
-                                    INTERÉS</p>
-                            </div>
-                        </a>
-                        <a href="javascript:void(0)">
-                            <img class="flecha flecha_izquierda"
+
+            <div>
+                <div>
+                    <ul>
+                        <a class="flecha flecha_izquierda">
+                            <img
                                 src="./images/icons/Left Vector 1 (Stroke).png">
                         </a>
-                    </article>
-                </li>
-                <li>
-                    <article>
-                        <a href="./item.html">
-                            <picture>
-                                <img src="./images/pokemon/pidgeotto-1.webp"
-                                    alt="Figura coleccionable de Funko de Pidgeotto">
-                                <span class="span_nuevo">Nuevo</span>
-                            </picture>
-                            <div class="ultimos_lanzamientos_text">
-                                <p>POKEMON</p>
-                                <h4>PIDGEOTTO</h4>
-                                <p>$ 1799,99</p>
-                                <p class="cuotas_sin_interes">3 CUOTAS SIN
-                                    INTERÉS</p>
-                            </div>
+                        <% const productsToShow = ['Stormtrooper Lightsaber', 'Pidgeotto Flying', 'Luna Lovegood Lion Mask']; %>
+                        <% for (let i = 0; i < funkoData.length; i++) { %>
+                        <% if (productsToShow.includes(funkoData[i].product_name)) { %>
+                        <li>
+                            <article>
+                                <a
+                                    href="/shop/item/<%= funkoData[i].product_id %>">
+                                    <picture>
+                                        <img src="<%= funkoData[i].img_front %>"
+                                            alt="Figura coleccionable de Funko<%= funkoData[i].product_name %>">
+                                        <span class="span_nuevo">Nuevo</span>
+                                    </picture>
+                                    <div class="ultimos_lanzamientos_text">
+                                        <p>
+                                            <%= funkoData[i].licence_name %>
+                                        </p>
+                                        <h4>
+                                            <%= funkoData[i].product_name %>
+                                        </h4>
+                                        <p>$
+                                            <%= funkoData[i].product_price.toFixed(2) %>
+                                        </p>
+                                        <p class="cuotas_sin_interes">3
+                                            CUOTAS SIN INTERÉS</p>
+                                    </div>
+                                </a>
+                            </article>
+                        </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        
+                        <% } %>
+                        
+                        <% } %><a
+                            class="flecha flecha_izquierda">
+                            <img
+                                src="/images/icons/Right Vector 1 (Stroke).png">
                         </a>
-                    </article>
-                </li>
-                <li>
-                    <article>
-                        <a href="./item.html">
-                            <picture>
-                                <img src="./images/harry-potter/luna-1.webp"
-                                    alt="Figura coleccionable de Funko de Luna Lovegood">
-                                <span class="span_nuevo">Nuevo</span>
-                            </picture>
-                            <div class="ultimos_lanzamientos_text">
-                                <p>HARRY POTTER</p>
-                                <h4>LUNA LOVEGOOD LION MASK</h4>
-                                <p>$ 1799,99</p>
-                                <p class="cuotas_sin_interes">3 CUOTAS SIN
-                                    INTERÉS</p>
-                            </div>
-                            </div>
-                        </a>
-                        <a href="javascript:void(0)">
-                            <img class="flecha flecha_derecha"
-                                src="./images/icons/Right Vector 1 (Stroke).png">
-                        </a>
-                    </article>
-                </li>
-            </ul>
+                    </ul>
+                </div>
+            </div>
         </section>
     </main>
     <%- include("./partials/footer.ejs") %>
+    <script>
+        new Glide('.glide', {
+            type: 'carousel',
+            startAt: 0,
+            perView: 3,
+            gap: 30,
+            autoplay: 2000,
+            breakpoints: {
+                991: {
+                    perView: 2
+                },
+                768: {
+                    perView: 1
+                }
+            }
+        }).mount();
+    </script>
 </body>
 
 </html>

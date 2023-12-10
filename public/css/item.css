@@ -78,6 +78,11 @@ p {
     line-height: normal;
 }
 
+.item_div_add_substract{
+    display: flex;
+    flex-direction: column;
+}
+
 .item-agregar_al_carrito div {
     display: flex;
     flex-direction: column;

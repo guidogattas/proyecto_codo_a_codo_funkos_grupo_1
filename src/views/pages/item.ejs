@@ -2,31 +2,52 @@
 
 <body>
     <!-- HEADER -->
-    <%- include('./partials/header.ejs') %><!-- HERO -->
+    <%- include("../partials/header.ejs") %><!-- HERO -->
 
     <!-- MAIN -->
-
     <main class="container">
         <section class="item-section">
-            <picture>
-                <img src="../images/star-wars/baby-yoda-1.webp"
-                    alt="Figura coleccionable de Funko de Grogu de la serie The Mandolorian">
-            </picture>
+            <div class="item-picture">
+                <picture>
+                    <img src="<%= item[0].img_front %>"
+                        alt=<%= item[0].product_name %>
+                </picture>
+            </div>
             <article class="item-article">
-                <h4>STAR WARS</h4>
-                <h3>BABY YODA BLUE</h3>
-                <p>Figura coleccionable de Baby Yoda (Grogu) - The Mandalorian
-                    Saga, edición limitada.</p>
-                <span class="item-precio">$ 1799,99</span>
-                <div class="item-agregar_al_carrito">
-                    <input type="number" value="0">
+                <h4>
+                    <%= item[0].licence_name %>
+                </h4>
+                <h3>
+                    <%= item[0].product_name %>
+                </h3>
+                <p>
+                    <%= item[0].product_description %>
+                </p>
+                <span class="item-precio">$
+                    <%= item[0].product_price %>
+                </span>
+                <!-- <div class="item-agregar_al_carrito">
+                    <input id="cantidad" type="number" value="0">
                     <div>
-                        <button>+</button>
-                        <button>-</button>
+                        <button id="sumar" >+</button>
+                        <button id="restar">-</button>
                     </div>
                     <button class="item-button-agregar_al_carrito">Agregar al
                         Carrito</button>
-                </div>
+                </div> -->
+                <form class="item-agregar_al_carrito" action="#" method="POST"
+                    enctype="application/x-www-form-urlencoded">
+                    <input id="quantity" class="item_input" type="text"
+                        name="quantity" placeholder="0">
+                    <div class="item_div_add_substract">
+                        <button id="add" class="item_add"
+                            type="button">+</button>
+                        <button id="subtract" class="item_substract"
+                            type="button">-</button>
+                    </div>
+                    <button class="item-button-agregar_al_carrito"
+                        type="submit">Agregar al carrito</button>
+                </form>
                 <p class="item-metodos_de_pago"><u>Ver métodos de pago</u> - 3
                     CUOTAS SIN INTERÉS</p>
 
@@ -37,9 +58,9 @@
             <ul>
                 <li>
                     <article>
-                        <a href="./item.html">
+                        <a href="/shop/item/4">
                             <picture>
-                                <img src="../images/star-wars/trooper-1.webp"
+                                <img src="/images/star-wars/trooper-1.webp"
                                     alt="Figura coleccionable de Funko de Stormtrooper">
                                 <span class="span_nuevo">Nuevo</span>
                             </picture>
@@ -52,17 +73,17 @@
                                     INTERÉS</p>
                             </div>
                         </a>
-                        <a href="javascript:void(0)">
+                        <!-- <a href="javascript:void(0)">
                             <img class="flecha flecha_izquierda"
-                                src="../images/icons/Left Vector 1 (Stroke).png">
-                        </a>
+                                src="/images/icons/Left Vector 1 (Stroke).png">
+                        </a> -->
                     </article>
                 </li>
                 <li>
                     <article>
-                        <a href="./item.html">
+                        <a href="/shop/item/7">
                             <picture>
-                                <img src="../images/pokemon/pidgeotto-1.webp"
+                                <img src="/images/pokemon/pidgeotto-1.webp"
                                     alt="Figura coleccionable de Funko de Pidgeotto">
                                 <span class="span_nuevo">Nuevo</span>
                             </picture>
@@ -78,9 +99,9 @@
                 </li>
                 <li>
                     <article>
-                        <a href="./item.html">
+                        <a href="/shop/item/12">
                             <picture>
-                                <img src="../images/harry-potter/luna-1.webp"
+                                <img src="/images/harry-potter/luna-1.webp"
                                     alt="Figura coleccionable de Funko de Luna Lovegood">
                                 <span class="span_nuevo">Nuevo</span>
                             </picture>
@@ -93,10 +114,10 @@
                             </div>
                             </div>
                         </a>
-                        <a href="javascript:void(0)">
+                        <!-- <a href="javascript:void(0)">
                             <img class="flecha flecha_derecha"
-                                src="../images/icons/Right Vector 1 (Stroke).png">
-                        </a>
+                                src="/images/icons/Right Vector 1 (Stroke).png">
+                        </a> -->
                     </article>
                 </li>
             </ul>
@@ -105,7 +126,8 @@
     </main>
 
     <!-- FOOTER -->
-    <%- include("./partials/footer.ejs") %>
+    <%- include("../partials/footer.ejs") %>
+    <script src="/js/item.js"></script>
 </body>
 
 </html>

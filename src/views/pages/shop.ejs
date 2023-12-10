@@ -6,8 +6,91 @@
 
     <!-- MAIN -->
 
-    <main class="container">
-        <h1>SHOP</h1>
+
+    <main id="shop" class="container">
+        <aside class="shop__filters filters">
+            <div class="filters__search">
+                <label class="filters__title" for="search">BUSCAR</label>
+                <input type="text" name="search" id="search"
+                    placeholder="item o categoría">
+            </div>
+            <div class="filters__order">
+                <label class="filters__title" for="orderby">ORDERNAR POR</label>
+                <select name="orderby" id="orderby">
+                    <option value="az">A-Z</option>
+                    <option value="za">Z-A</option>
+                    <option value="desc">Mayor precio</option>
+                    <option value="asc">Menor precio</option>
+                </select>
+            </div>
+            <div class="filters__price">
+                <span class="filters__title">PRECIO</span>
+                <div>
+                    <label for="min">MIN</label>
+                    <input type="text" name="min" id="min" placeholder="0">
+                    <label for="max">MAX</label>
+                    <input type="text" name="max" id="max" placeholder="0">
+                </div>
+            </div>
+            <div class="filters__checks">
+                <span class="filters__title" for="filter">FILTRAR</span>
+                <div>
+                    <input type="checkbox" name="filter" id="news" value="news">
+                    <label for="">NUEVOS</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="filter" id="offers"
+                        value="offers">
+                    <label for="">OFERTAS</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="filter" id="specials"
+                        value="specials">
+                    <label for="">EDICIÓN ESPECIAL</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="filter" id="favs" value="favs">
+                    <label for="">FAVORITOS</label>
+                </div>
+            </div>
+        </aside>
+        <section class="shop_section">
+            <ul>
+                <% for (let i = 0; i < collection.length; i++) { %>
+                <li class="shop_item">
+                    <article>
+                        <a
+                            href="/shop/item/<%= collection[i].product_id %>">
+                            <picture>
+                                <img src="<%= collection[i].img_front %>"
+                                    alt="Figura coleccionable de Funko<%= collection[i].product_name %>">
+                                <span class="span_nuevo">Nuevo</span>
+                            </picture>
+                            <div class="ultimos_lanzamientos_text">
+                                <p>
+                                    <%= collection[i].licence_name %>
+                                </p>
+                                <h4>
+                                    <%= collection[i].product_name %>
+                                </h4>
+                                <p>$
+                                    <%= collection[i].product_price.toFixed(2) %>
+                                </p>
+                                <p class="cuotas_sin_interes">3
+                                    CUOTAS SIN INTERÉS</p>
+                            </div>
+                        </a>
+                    </article>
+                </li>
+
+
+
+
+
+                
+                <% } %>
+            </ul>
+        </section>
     </main>
 
     <!-- FOOTER -->

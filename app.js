@@ -15,18 +15,17 @@ app.set('views', resolve() + '/src/views')
 
 app.use(express.static('public'))
 
-const funkoData = JSON.parse(fs.readFileSync(resolve() + "/src/data/funko.json", 'utf-8'))
 
 
-app.use((req, res, next) => {
-    res.locals.funkoData = funkoData;
-    next();
-});
 
 app.use('/', mainRoutes)
 app.use('/shop', shopRoutes)
 app.use('/admin', adminRoutes)
 app.use('/auth', authRoutes)
+
+app.use((req, res) => {
+    res.status(404).render('pages/error404.ejs');
+});
 
 app.listen(port, () => {
     console.log(`Servidor ok en puerto ${port}`)
