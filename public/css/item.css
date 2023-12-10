@@ -2,7 +2,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-top: 120px;
+    justify-content: center;
+    margin: 60px;
 }
 
 
@@ -13,7 +14,11 @@
 
 }
 
-h4 {
+div.item-picture img {
+    height: 450px;
+}
+
+.item-article h4 {
     font-family: Inter;
     font-size: 16px;
     font-style: normal;
@@ -21,7 +26,7 @@ h4 {
     line-height: normal;
 }
 
-h3 {
+.item-article h3 {
     color: #111;
     font-family: Inter;
     font-size: 38px;
@@ -30,7 +35,7 @@ h3 {
     line-height: normal;
 }
 
-p {
+.item-description p {
     color: var(--Gray-1, #333);
     font-family: Inter;
     font-size: 24px;
@@ -39,7 +44,7 @@ p {
     line-height: normal;
 }
 
-.item-precio {
+span.item-precio {
     color: #333;
     font-family: Inter;
     font-size: 38px;
@@ -93,12 +98,10 @@ p {
 .item-agregar_al_carrito div button {
     background-color: #4F4F4F;
     color: #FFFFFF;
-    padding: 4px 8px;
+    padding: 6px;
     border: none;
-    font-size: 18px;
-    /* font-weight: bold; */
-    /* width: 22px; */
-    ;
+    font-size: 12px;
+    align-content: space-around;
 
 }
 
@@ -106,12 +109,12 @@ p {
     background-color: #FF3333;
     color: #FFF;
     font-family: Inter;
-    font-size: 18px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     border: none;
-    padding: 14px;
+    padding: 10px 12px;
     margin-left: 20px;
 
 }

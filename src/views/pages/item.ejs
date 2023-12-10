@@ -20,21 +20,13 @@
                 <h3>
                     <%= item[0].product_name %>
                 </h3>
-                <p>
+                <p class="item-description">
                     <%= item[0].product_description %>
                 </p>
                 <span class="item-precio">$
                     <%= item[0].product_price %>
                 </span>
-                <!-- <div class="item-agregar_al_carrito">
-                    <input id="cantidad" type="number" value="0">
-                    <div>
-                        <button id="sumar" >+</button>
-                        <button id="restar">-</button>
-                    </div>
-                    <button class="item-button-agregar_al_carrito">Agregar al
-                        Carrito</button>
-                </div> -->
+
                 <form class="item-agregar_al_carrito" action="#" method="POST"
                     enctype="application/x-www-form-urlencoded">
                     <input id="quantity" class="item_input" type="text"
