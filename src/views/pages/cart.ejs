@@ -6,7 +6,91 @@
 
     <!-- MAIN -->
 
-    <h1>Carrito</h1>
+    <main class="container">
+        <h1 class="carrito_de_compras">CARRITO DE COMPRAS
+        </h1>
+
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th>Detalle de Producto</th>
+                    <th>Cantidad</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody class="cart-tbody">
+                <tr class="cart-tr">
+                    <td>
+                        <section class="item-section">
+                            <picture>
+                                <img src="/images/star-wars/baby-yoda-1.webp"
+                                    alt="Figura coleccionable de Funko de Grogu de la serie The Mandolorian">
+                            </picture>
+                            <article class="item-article">
+                                <h3>BABY YODA BLUEBALL</h3>
+                                <p>STAR WARS
+                                </p>
+                                <span class="item-precio">Precio unitario: $
+                                    1799,99</span>
+
+                            </article>
+                        </section>
+                    </td>
+                    <td>
+                        <div class="item-agregar_al_carrito">
+                            <input type="number" value="2">
+                            <div class="item-acciones">
+                                <button>+</button>
+                                <button>-</button>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="cart-td-precio">
+                        <p class="item-precio">$ 3599,98</p>
+                    </td>
+                    <td class="cart-td-button">
+                        <i class="fa-regular fa-circle-xmark fa-3x"
+                            style="color: #ff1900;"></i>
+                    </td>
+                </tr>
+
+                <tr class="cart-tr">
+                    <td>
+                        <section class="item-section">
+                            <picture>
+                                <img src="/images/star-wars/baby-yoda-1.webp"
+                                    alt="Figura coleccionable de Funko de Grogu de la serie The Mandolorian">
+                            </picture>
+                            <article class="item-article">
+                                <h3>PIDGEOTTO</h3>
+                                <p>POKEMON
+                                </p>
+                                <span class="item-precio">Precio unitario: $
+                                    1799,99</span>
+
+                            </article>
+                        </section>
+                    </td>
+                    <td>
+                        <div class="item-agregar_al_carrito">
+                            <input type="number" value="1">
+                            <div class="item-acciones">
+                                <button>+</button>
+                                <button>-</button>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="cart-td-precio">
+                        <p class="item-precio">$ 1799,99</p>
+                    </td>
+                    <td class="cart-td-button">
+                        <i class="fa-regular fa-circle-xmark fa-3x"
+                            style="color: #ff1900;"></i>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
 
     <!-- FOOTER -->
     <%- include("../partials/footer.ejs") %>
