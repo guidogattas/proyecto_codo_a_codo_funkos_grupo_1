@@ -26,7 +26,6 @@
       --nuevoText: #fff;
       --cuotaSinInteres: #1D84B5;
       --forgot: #1D84B5
-
   }
 
   html {
@@ -244,7 +243,6 @@
       padding: 6px 24px;
       font-size: 14px;
       text-transform: uppercase;
-
   }
 
   .ultimos_lanzamientos {
@@ -311,5 +309,6 @@
       font-weight: 700;
       font-size: 22px;
   }
+
 
 

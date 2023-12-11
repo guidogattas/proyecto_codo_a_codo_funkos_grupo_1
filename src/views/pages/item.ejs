@@ -9,28 +9,27 @@
         <section class="item-section">
             <div class="item-picture">
                 <div class="image-container"
-                    style="background-image: url('<%= item[0].img_front %>')">
+                    style="background-image: url('<%= item.img_front %>')">
                 </div>
                 <div class="image-back"
-                    style="background-image: url('<%= item[0].img_back %>')">
+                    style="background-image: url('<%= item.img_back %>')">
                 </div>
             </div>
             <article class="item-article">
                 <h4>
-                    <%= item[0].licence_name %>
+                    <%= item.licence_name %>
                 </h4>
                 <h3>
-                    <%= item[0].product_name %>
+                    <%= item.product_name %>
                 </h3>
                 <p class="item-description">
-                    <%= item[0].product_description %>
+                    <%= item.product_description %>
                 </p>
                 <span class="item-precio">$
-                    <%= item[0].product_price %>
+                    <%= item.product_price %>
                 </span>
 
-                <form class="item-agregar_al_carrito" action="#" method="POST"
-                    enctype="application/x-www-form-urlencoded">
+                <form class="item-agregar_al_carrito">
                     <input id="quantity" class="item_input" type="text"
                         name="quantity" placeholder="0">
                     <div class="item_div_add_substract">
@@ -39,8 +38,8 @@
                         <button id="subtract" class="item_substract"
                             type="button">-</button>
                     </div>
-                    <button class="item-button-agregar_al_carrito"
-                        type="submit">Agregar al carrito</button>
+                    <button class="item-button-agregar_al_carrito">Agregar al
+                        carrito</button>
                 </form>
                 <p class="item-metodos_de_pago"><u>Ver métodos de pago</u> - 3
                     CUOTAS SIN INTERÉS</p>

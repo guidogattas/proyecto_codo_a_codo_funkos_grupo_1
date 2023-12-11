@@ -10,16 +10,13 @@ const shopControllers = {
             const collectionName = req.params.collectionName;
             filteredCollection = funkoData.filter(item => item.collection_name === collectionName);
         } else {
-
             filteredCollection = funkoData;
         }
-
-
         res.render('pages/shop.ejs', { collection: filteredCollection });
     },
     itemView: (req, res) => {
         const id = req.params.id;
-        const item = funkoData.filter(item => item.product_id == id);
+        const item = funkoData.find(item => item.product_id == id);
         res.render('pages/item.ejs', { item: item })
     },
     collection: (req, res) => {

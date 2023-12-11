@@ -15,9 +15,6 @@ app.set('views', resolve() + '/src/views')
 
 app.use(express.static('public'))
 
-
-
-
 app.use('/', mainRoutes)
 app.use('/shop', shopRoutes)
 app.use('/admin', adminRoutes)
@@ -28,5 +25,5 @@ app.use((req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`Servidor ok en puerto ${port}`)
+    console.log(`Servidor ok en localhost:${port}`)
 })

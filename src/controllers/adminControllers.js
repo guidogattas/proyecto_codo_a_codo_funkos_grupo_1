@@ -1,6 +1,3 @@
-const ejs = require('ejs');
-const { resolve } = require('path');
-
 
 const adminControllers = {
     adminView: (req, res) => {
