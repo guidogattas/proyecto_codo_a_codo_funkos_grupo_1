@@ -2,9 +2,9 @@
     margin-top: 128px;
 }
 
-/* .cart-tr {
+.cart-tr {
     margin-top: 100px
-} */
+}
 
 h1.carrito_de_compras {
     color: #111;
@@ -17,6 +17,10 @@ h1.carrito_de_compras {
     display: inline;
     border-bottom: 5px solid #F33;
     margin-bottom: 100;
+}
+
+.cart-tr .item-section {
+    justify-content: flex-start;
 }
 
 .item-section img{
@@ -56,7 +60,6 @@ margin: 0 auto;
     font-family: 'Inter';
     font-size: 16px;
     font-style: normal;
-    font-weight: 700;
 }
 
 th {
@@ -78,12 +81,64 @@ th {
     /* width: 100%;  */
 }
 
-.cart-td-precio p {
+.item-agregar_al_carrito .item-acciones button {
+    background-color: red;
+}
+
+.item-precio{
     font-family: 'Inter';
     font-size: 18px;
     font-style: normal;
 }
 
-.item-agregar_al_carrito .item-acciones button {
-    background-color: red;
+/* RESUMEN */
+
+section.aside {
+    height: 200px;
+}
+
+aside.resumen {
+    display: flex;
+    flex-direction: column;
+    float: right;
+    margin-top: 30px;
+    width: 30%;
+    right: 0;
+    text-align: right;
+   
+}
+
+div.resumen-total{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap:6px 
+}
+
+div.resumen-total div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+}
+
+div.resumen-total div h4 {
+    font-size: 12px;
+}
+
+
+aside.resumen h2 {
+    color: #111;
+    font-family: 'Inter';
+    font-size: 46px;
+    text-transform: uppercase;
+
+}
+
+.total {
+    font-size: 10px;
+    font-weight: bold;
+    margin-top: 6px;
+    border-top: 3px solid #F33;
 }

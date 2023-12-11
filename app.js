@@ -6,7 +6,7 @@ const shopRoutes = require('./src/routes/shopRoutes')
 const adminRoutes = require('./src/routes/adminRoutes')
 const authRoutes = require('./src/routes/authRoutes')
 const { resolve } = require('path')
-const fs = require('fs');
+
 
 
 app.set('view engine', 'ejs')

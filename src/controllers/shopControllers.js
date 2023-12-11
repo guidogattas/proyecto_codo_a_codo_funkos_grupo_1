@@ -14,9 +14,8 @@ const shopControllers = {
             filteredCollection = funkoData;
         }
 
-        const collectionTitle = filteredCollection.length > 0 ? filteredCollection[0].licence_name.toUpperCase() : '';
 
-        res.render('pages/shop.ejs', { collection: filteredCollection, collectionTitle });
+        res.render('pages/shop.ejs', { collection: filteredCollection });
     },
     itemView: (req, res) => {
         const id = req.params.id;
