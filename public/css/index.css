@@ -246,6 +246,7 @@
   }
 
   .ultimos_lanzamientos {
+    overflow: hidden;
       position: relative;
   }
 
