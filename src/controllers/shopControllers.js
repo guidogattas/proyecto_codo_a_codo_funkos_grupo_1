@@ -1,7 +1,5 @@
-const fs = require('fs');
-const { resolve } = require('path');
+const funkoData = require('../loaders/funkoLoader')
 
-const funkoData = JSON.parse(fs.readFileSync(resolve() + "/src/data/funko.json", 'utf-8'));
 
 const shopControllers = {
     shopView: (req, res) => {
@@ -17,7 +15,7 @@ const shopControllers = {
     itemView: (req, res) => {
         const id = req.params.id;
         const item = funkoData.find(item => item.product_id == id);
-        res.render('pages/item.ejs', { item: item })
+        res.render('pages/item.ejs', { item: item, funkoData: funkoData })
     },
     collection: (req, res) => {
         const collectionName = req.params.collectionName;

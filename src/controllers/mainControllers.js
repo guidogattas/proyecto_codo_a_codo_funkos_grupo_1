@@ -1,7 +1,4 @@
-const fs = require('fs');
-const { resolve } = require('path');
-
-const funkoData = JSON.parse(fs.readFileSync(resolve() + "/src/data/funko.json", 'utf-8'));
+const funkoData = require('../loaders/funkoLoader')
 
 const mainControllers = {
     mainPage: (req, res) => {
