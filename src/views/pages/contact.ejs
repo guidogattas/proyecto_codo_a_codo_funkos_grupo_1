@@ -1,3 +1,4 @@
+<!-- contact.ejs -->
 <%- include("../partials/head.ejs") %>
 
 <body>
@@ -5,9 +6,32 @@
     <%- include("../partials/header.ejs") %><!-- HERO -->
 
     <!-- MAIN -->
-
     <main class="container">
-        <h1>CONTACT</h1>
+
+        <section class="contact-section">
+            <p>¡Estamos para ayudarte! Contáctanos para cualquier pregunta
+                o inquietud.</p>
+
+            <div class="contact-info">
+                <p><strong>Dirección:</strong> Calle de los Funkos, 123</p>
+                <p><strong>Teléfono:</strong> (123) 456-7890</p>
+                <p><strong>Correo Electrónico:</strong> info@funko.com</p>
+            </div>
+
+            <h2>Formulario de Contacto</h2>
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" required>
+
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" name="correo" required>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea name="mensaje" rows="4" required></textarea>
+
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+        </section>
     </main>
 
     <!-- FOOTER -->
