@@ -6,9 +6,10 @@ body {
     padding: 0;
 }
 
-.container {
+.container-section {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 40px auto;
+    width: 50%;
 }
 
 .contact-section {
@@ -23,6 +24,7 @@ body {
 form {
     margin-top: 20px;
     text-align: left;
+
 }
 
 label {
