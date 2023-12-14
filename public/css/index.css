@@ -28,6 +28,12 @@
       --forgot: #1D84B5
   }
 
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
   html {
       font-family: 'Inter', sans-serif;
       font-size: 62.5%;
